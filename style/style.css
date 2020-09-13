@@ -1,0 +1,226 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  margin: 0;
+  padding: 0;
+}
+
+.none {
+  display: none;
+}
+
+body {
+  background-color: #2a8878;
+  font-family: 'Cookie', fantasy;
+  color: #feebda;
+  text-align: center;
+}
+
+header {
+  background-color: #0c7973;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem;
+}
+
+header button {
+  background-color: transparent;
+  border: 0;
+}
+
+header button img {
+  height: 15px;
+}
+
+header form input {
+  border: 0;
+  border-radius: 0.5rem;
+  width: 6rem;
+  background-color: #2a8878;
+  padding: 0.25rem 0.5rem;
+}
+
+header form input::-webkit-input-placeholder {
+  color: #feebda;
+}
+
+header form input:-ms-input-placeholder {
+  color: #feebda;
+}
+
+header form input::-ms-input-placeholder {
+  color: #feebda;
+}
+
+header form input::placeholder {
+  color: #feebda;
+}
+
+.not-mobile {
+  display: none;
+}
+
+#logo {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+  padding-bottom: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+p a {
+  color: #e782a4;
+}
+
+h2 {
+  font-size: 3rem;
+  padding: 1rem;
+}
+
+article {
+  background-color: #feebda;
+  margin: 1rem;
+  color: #e782a4;
+  padding: 1rem;
+}
+
+article img {
+  display: none;
+}
+
+article h3 {
+  font-size: 2rem;
+  border-bottom: 1px dotted #e782a4;
+  margin-bottom: 1rem;
+}
+
+footer {
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 800px) {
+  header {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header button {
+    display: none;
+  }
+  .not-mobile {
+    display: block;
+    background-color: #feebda;
+  }
+  .not-mobile ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .not-mobile ul a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding: 0.5rem 2rem;
+    display: inline-block;
+    color: #991d42;
+  }
+  #home {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 1rem;
+    padding-top: 2rem;
+  }
+  #home div {
+    text-align: left;
+    width: 65%;
+  }
+  #home div p {
+    font-size: 1.5rem;
+  }
+  h1, h2 {
+    font-size: 3.5rem;
+  }
+  #yummies {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #yummies article {
+    width: 250px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  header {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .not-mobile ul {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  #logo {
+    position: absolute;
+    top: 0.25rem;
+    left: 0.25rem;
+    height: 7rem;
+    padding: 0;
+  }
+  #home {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #home p {
+    -webkit-column-count: 2;
+            column-count: 2;
+  }
+  article {
+    position: relative;
+  }
+  article img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  article img:hover {
+    -webkit-transform: translate(-50%, -50%) scale(2) rotate(360deg);
+            transform: translate(-50%, -50%) scale(2) rotate(360deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */

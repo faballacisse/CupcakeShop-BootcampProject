@@ -1,0 +1,141 @@
+$green_dark: #0c7973
+$green: #2a8878
+$beige: #feebda
+$pink: #e782a4
+$pink_dark: #991d42
+$break_medium: 800px
+$break_large: 1200px
+
+//reset
+*
+  box-sizing: border-box
+  transition-duration: 0.4s
+  margin: 0
+  padding: 0
+
+.none
+  display: none
+
+body
+  background-color: $green
+  font-family: 'Cookie', fantasy
+  color: $beige
+  text-align: center
+
+header
+  background-color: $green_dark
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 0.5rem
+  button
+    background-color: transparent
+    border: 0
+    img
+      height: 15px
+  form input
+    border: 0
+    border-radius: 0.5rem
+    width: 6rem
+    background-color: $green
+    padding: 0.25rem 0.5rem
+    &::placeholder
+      color: $beige
+.not-mobile
+  display: none
+
+// main part
+#logo
+  padding-top: 1rem
+  padding-bottom: 1rem
+
+h1
+  font-size: 3rem
+  padding-bottom: 1rem
+p
+  font-size: 1.2rem
+  a
+    color: $pink
+h2
+  font-size: 3rem
+  padding: 1rem
+
+article
+  background-color: $beige
+  margin: 1rem
+  color: $pink
+  padding: 1rem
+  img
+    display: none
+  h3
+    font-size: 2rem
+    border-bottom: 1px dotted $pink
+    margin-bottom: 1rem
+footer
+  font-size: 1.2rem
+
+@media screen and (min-width: $break_medium)
+  header
+    justify-content: center
+    button
+      display: none
+
+  .not-mobile
+    display: block
+    background-color: $beige
+    ul
+      display: flex
+      justify-content: space-evenly
+      a
+        font-size: 1.5rem
+        text-decoration: none
+        padding: 0.5rem 2rem
+        display: inline-block
+        color: $pink_dark
+
+  #home
+    display: flex
+    flex-direction: row-reverse
+    justify-content: space-between
+    padding: 1rem
+    padding-top: 2rem
+    div
+      text-align: left
+      width: 65%
+      p
+        font-size: 1.5rem
+  h1, h2
+    font-size: 3.5rem
+
+  #yummies
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    article
+      width: 250px
+@media screen and (min-width: $break_large)
+  header
+    justify-content: flex-end
+  .not-mobile ul
+    justify-content: flex-end
+  #logo
+    position: absolute
+    top: 0.25rem
+    left: 0.25rem
+    height: 7rem
+    padding: 0
+  #home
+    justify-content: center
+    p
+      column-count: 2
+  article
+    position: relative
+    img
+      display: block
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translate(-50%,-50%)
+      &:hover
+        transform: translate(-50%,-50%) scale(2) rotate(360deg)
+
